@@ -49,25 +49,25 @@ repos:
         pass_filenames: false
         files: pyproject.toml
 
-  - repo: https://gitlab.com/pycqa/flake8
-    rev: 4.0.1
+  - repo: https://github.com/PyCQA/flake8
+    rev: 7.1.1
     hooks:
       - id: flake8
         args: ["--exclude=docs/*,*migrations*", "--ignore=E501,W503,E203"]
 
-  - repo: https://github.com/timothycrosley/isort
-    rev: 5.10.1
+  - repo: https://github.com/PyCQA/isort
+    rev: 5.13.2
     hooks:
       - id: isort
         args: ["--check-only", "--diff"]
         additional_dependencies: ["toml"]
 
   - repo: https://github.com/pre-commit/pygrep-hooks
-    rev: v1.9.0
+    rev: v1.10.0
     hooks:
       - id: python-check-mock-methods
 
-  - repo: https://github.com/python/black
-    rev: 22.3.0
+  - repo: https://github.com/psf/black
+    rev: 24.10.0
     hooks:
       - id: black
